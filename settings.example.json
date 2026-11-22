@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [{ "type": "command", "command": "bash ~/.claude/hooks/session-start-context.sh" }] }
+    ],
+    "PreCompact": [
+      { "hooks": [{ "type": "command", "command": "bash ~/.claude/hooks/precompact-state.sh" }] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Write|Edit", "hooks": [
+        { "type": "command", "command": "bash ~/.claude/hooks/no-dash.sh" },
+        { "type": "command", "command": "bash ~/.claude/hooks/voice-warn.sh" }
+      ] },
+      { "matcher": "Bash", "hooks": [
+        { "type": "command", "command": "bash ~/.claude/hooks/git-push-guard.sh" },
+        { "type": "command", "command": "bash ~/.claude/hooks/look-before-ocr.sh" }
+      ] },
+      { "matcher": "Read|mcp__.*browser_take_screenshot", "hooks": [
+        { "type": "command", "command": "powershell -NoProfile -ExecutionPolicy Bypass -File %USERPROFILE%\\.claude\\hooks\\image-size-guard.ps1" }
+      ] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Read", "hooks": [{ "type": "command", "command": "bash ~/.claude/hooks/looked-at-log.sh" }] }
+    ]
+  }
+}

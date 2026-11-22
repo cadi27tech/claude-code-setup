@@ -1,0 +1,14 @@
+{
+  "slug": "claude-code-setup",
+  "title": "Claude Code Setup Pack",
+  "summary": "The rules, guardrail hooks, memory system and approval gate used daily across 40+ Claude Code projects: block dash characters, warn on ghost-written first-person copy, refuse PDF text extraction until every page was looked at, survive context compaction, and never send anything without a single-use approval.",
+  "licence": "FSL-1.1-MIT",
+  "sort": 40,
+  "production": {
+    "months_live": 3,
+    "monthly_cost_eur": "0 EUR extra; it runs inside Claude Code, which needs your paid Claude plan (Pro or Max) or API usage",
+    "version": "1.0.0",
+    "last_tested": "2026-11-20",
+    "incidents": "Each hook exists because of a dated incident (see README); none recorded since Aug 2026."
+  }
+}

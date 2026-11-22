@@ -1,0 +1,5 @@
+- [Never contact anyone without a per-item yes](examples/feedback-no-contact-without-approval.md) - no email, DM or post goes out on a blanket approval
+- [Estimates need a confirm gate](examples/feedback-estimates-confirm-gate.md) - numbers marked [EST] are confirmed before they leave the machine
+- [Research before every decision](examples/feedback-research-before-decisions.md) - agents research now and the 3-5 year outlook, sources cited
+- [Windows TLS behind antivirus](examples/reference-windows-tls.md) - use the OS certificate store; git push needs schannel
+- [Project: client portal open items](examples/project-open-items.md) - live checklist, oldest first, delete lines when done
